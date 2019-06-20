@@ -1,0 +1,39 @@
+###服务启动端口号
+server:
+  port: 80
+###服务名称(服务注册到eureka名称)  
+spring:
+    application:
+        name: bdkt-zuul
+    profiles:
+      active: ${BDKT_ACTIVE:pro}
+---
+spring:
+  profiles: dev
+###服务注册到eureka地址
+eureka:
+  instance:
+    #prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 20
+  client:
+    serviceUrl:
+      defaultZone: http://bdkt:vipbdkt@eureka.baidukt.com:8100/eureka
+    registry-fetch-interval-seconds: 10
+---
+spring:
+  profiles: pro
+app:
+  id: bdkt-zuul
+apollo:
+  meta: http://apollo.baidukt.com:8080 #apollo adminservice
+eureka:
+  instance:
+    #prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 20
+  client:
+    serviceUrl:
+      defaultZone: http://bdkt:vipbdkt@eureka.baidukt.com:8100/eureka
+    registry-fetch-interval-seconds: 10
+
