@@ -1,7 +1,5 @@
-###服务启动端口号
 server:
   port: 8300
-###服务名称(服务注册到eureka名称)  
 spring:
     application:
         name: bdkt-service-member
@@ -10,7 +8,6 @@ spring:
 ---
 spring:
   profiles: dev
-###服务注册到eureka地址
 eureka:
   instance:
     #prefer-ip-address: true
@@ -26,7 +23,7 @@ spring:
 app:
   id: bdkt-service-member
 apollo:
-  meta: http://apollo.baidukt.com:8080 #apollo adminservice
+  meta: http://apollo.baidukt.com:8080
 eureka:
   instance:
     #prefer-ip-address: true

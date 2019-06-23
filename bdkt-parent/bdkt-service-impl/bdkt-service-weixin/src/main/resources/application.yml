@@ -1,16 +1,13 @@
-###服务启动端口号
 server:
   port: 8200
-###服务名称(服务注册到eureka名称)  
 spring:
     application:
         name: bdkt-service-weixin
     profiles:
-      active: ${BDKT_ACTIVE:pro}
+      active: pro #${BDKT_ACTIVE:pro}
 ---
 spring:
   profiles: dev
-###服务注册到eureka地址
 eureka:
   instance:
     #prefer-ip-address: true
@@ -20,13 +17,17 @@ eureka:
     serviceUrl:
       defaultZone: http://bdkt:vipbdkt@eureka.baidukt.com:8100/eureka
     registry-fetch-interval-seconds: 10
+swagger:
+  authorization:
+    type:
+yang: yzx
 ---
 spring:
   profiles: pro
 app:
   id: bdkt-service-weixin
 apollo:
-  meta: http://apollo.baidukt.com:8080 #apollo adminservice
+  meta: http://apollo.baidukt.com:8080
 eureka:
   instance:
     #prefer-ip-address: true
@@ -36,4 +37,14 @@ eureka:
     serviceUrl:
       defaultZone: http://bdkt:vipbdkt@eureka.baidukt.com:8100/eureka
     registry-fetch-interval-seconds: 10
+####swagger相关配置
+#swagger:
+#  base-package: com.
+#  title: SpringCloud2.x构建微服务电商项目-微信服务接口
+#  description: 该项目“基于SpringCloud2.x构建微服务电商项目”由每特教育|蚂蚁课堂版权所有，未经过允许的情况下，私自分享视频和源码属于违法行为。
+#  version: 1.1
+#  terms-of-service-url: www.mayikt.com
+#  contact:
+#    name: 97后互联网架构师-余胜军
+#    email: 644064779@qq.com
 
