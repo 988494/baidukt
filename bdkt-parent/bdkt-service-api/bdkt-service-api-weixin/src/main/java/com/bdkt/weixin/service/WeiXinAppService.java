@@ -1,4 +1,4 @@
-package com.bdkt.service;
+package com.bdkt.weixin.service;
 
 import com.bdkt.entity.AppEntity;
 import io.swagger.annotations.Api;

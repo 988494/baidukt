@@ -1,7 +1,7 @@
 package com.bdkt.member.feign;
 
 import com.bdkt.entity.AppEntity;
-import com.bdkt.service.WeiXinAppService;
+import com.bdkt.weixin.service.WeiXinAppService;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 

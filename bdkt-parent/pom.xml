@@ -31,6 +31,8 @@
         <spring-cloud.version>Finchley.SR2</spring-cloud.version>
         <eurek-version>2.0.2.RELEASE</eurek-version>
         <swagger.version>1.9.0.RELEASE</swagger.version>
+        <weixin-java-mp.version>3.4.0</weixin-java-mp.version>
+        <httpcomponents-httpclient.version>4.5.8</httpcomponents-httpclient.version>
     </properties>
 
     <dependencies>

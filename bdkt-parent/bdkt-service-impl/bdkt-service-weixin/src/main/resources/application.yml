@@ -5,6 +5,25 @@ spring:
         name: bdkt-service-weixin
     profiles:
       active: ${BDKT_ACTIVE:pro}
+    redis:
+      host: 47.111.115.253
+      port: 9010
+      password: bdkt@redis
+
+logging:
+  level:
+    org.springframework.web: INFO
+    com.github.binarywang.demo.wx.mp: DEBUG
+    me.chanjar.weixin: DEBUG
+wx:
+  mp:
+    configs:
+    - appId: wx9b1c8160b0949b95
+      secret: 26a58b08e923fe141866cec14ee76b51
+      token: bdkt
+  registion:
+    code-message: 您的注册码为:%s，欢迎来到百度课堂，<a href='https://jq.qq.com/?_wv=1027&k=5jjoezX'>点击链接加入【百度课堂】【官方群】</a>，期待你的加入,谢谢！
+    default-code-message: 您的消息，我们已经收到,会及时回复给您的!
 ---
 spring:
   profiles: local

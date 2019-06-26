@@ -13,10 +13,33 @@
     <packaging>jar</packaging>
 
     <dependencies>
+        <!--微信api-->
         <dependency>
             <groupId>com.bdkt</groupId>
             <artifactId>bdkt-service-api-weixin</artifactId>
             <version>1.0-RELEASE</version>
+        </dependency>
+        <!--公共包-->
+        <dependency>
+            <groupId>com.bdkt</groupId>
+            <artifactId>bdkt-common-core</artifactId>
+            <version>1.0-RELEASE</version>
+        </dependency>
+        <!--wxJava框架-->
+        <dependency>
+            <groupId>com.github.binarywang</groupId>
+            <artifactId>weixin-java-mp</artifactId>
+            <version>3.4.0</version>
+        </dependency>
+        <!--lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
     </dependencies>
 

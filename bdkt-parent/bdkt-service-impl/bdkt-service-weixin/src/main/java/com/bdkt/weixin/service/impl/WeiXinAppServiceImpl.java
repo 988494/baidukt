@@ -1,7 +1,7 @@
-package com.bdkt.service.impl;
+package com.bdkt.weixin.service.impl;
 
 import com.bdkt.entity.AppEntity;
-import com.bdkt.service.WeiXinAppService;
+import com.bdkt.weixin.service.WeiXinAppService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RestController;
 
