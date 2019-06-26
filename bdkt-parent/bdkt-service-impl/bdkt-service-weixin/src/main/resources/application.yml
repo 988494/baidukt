@@ -4,7 +4,19 @@ spring:
     application:
         name: bdkt-service-weixin
     profiles:
-      active: pro #${BDKT_ACTIVE:pro}
+      active: ${BDKT_ACTIVE:pro}
+---
+spring:
+  profiles: local
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 20
+  client:
+    serviceUrl:
+      defaultZone: http://bdkt:vipbdkt@localhost:8100/eureka
+    registry-fetch-interval-seconds: 10
+yang: yzxlocal
 ---
 spring:
   profiles: dev
@@ -37,14 +49,4 @@ eureka:
     serviceUrl:
       defaultZone: http://bdkt:vipbdkt@eureka.baidukt.com:8100/eureka
     registry-fetch-interval-seconds: 10
-####swagger相关配置
-#swagger:
-#  base-package: com.
-#  title: SpringCloud2.x构建微服务电商项目-微信服务接口
-#  description: 该项目“基于SpringCloud2.x构建微服务电商项目”由每特教育|蚂蚁课堂版权所有，未经过允许的情况下，私自分享视频和源码属于违法行为。
-#  version: 1.1
-#  terms-of-service-url: www.mayikt.com
-#  contact:
-#    name: 97后互联网架构师-余胜军
-#    email: 644064779@qq.com
 

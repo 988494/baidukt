@@ -5,7 +5,7 @@ import com.bdkt.service.WeiXinAppService;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@FeignClient(name = "app-mayikt-weixin")
+@FeignClient(name = "bdkt-service-weixin")
 public interface WeiXinAppServiceFeign extends WeiXinAppService {
 
 	 /**

@@ -13,6 +13,7 @@
         <module>bdkt-portal</module>
         <module>bdkt-service-api</module>
         <module>bdkt-service-impl</module>
+        <module>bdkt-api-entity</module>
     </modules>
     <packaging>pom</packaging>
 
