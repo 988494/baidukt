@@ -40,8 +40,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>com.bdkt.AppEureka</mainClass>
-                    <finalName>${project.name}</finalName>
+                    <finalName>${project.name}-${version}</finalName>
                 </configuration>
                 <executions>
                     <execution>
