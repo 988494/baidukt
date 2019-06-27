@@ -19,10 +19,18 @@
             <artifactId>swagger-spring-boot-starter</artifactId>
             <version>${swagger.version}</version>
         </dependency>
+        <!--接口实体类-->
         <dependency>
             <groupId>com.bdkt</groupId>
             <artifactId>bdkt-api-weixin-entity</artifactId>
             <version>1.0-RELEASE</version>
+        </dependency>
+        <!--公共包-->
+        <dependency>
+            <groupId>com.bdkt</groupId>
+            <artifactId>bdkt-common-core</artifactId>
+            <version>1.0-RELEASE</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 </project>

@@ -58,14 +58,14 @@ public class MsgHandler extends AbstractHandler {
 
         //TODO 组装回复消息
         // 1.获取客户端发送的消息
-        String fromContent = wxMessage.getContent();//手机号
+        String phone = wxMessage.getContent();//手机号
         // 2.如果客户端发送消息为手机号码，则发送验证码
-        if (RegexUtils.checkMobile(fromContent)) {
+        if (RegexUtils.checkMobile(phone)) {
             // 3.生成随机四位注册码
             int registCode = registCode();
             String content = String.format(registrationCodeMessage, registCode);
             // 4.将验证码存放在Redis中
-            redisUtil.setForTimeMIN(Constants.WEIXINCODE_KEY + fromContent, registCode + "", Constants.WEIXINCODE_TIMEOUT);
+            redisUtil.setForTimeMIN(Constants.WEIXINCODE_KEY + phone, registCode + "", Constants.WEIXINCODE_TIMEOUT);
             return new TextBuilder().build(content, wxMessage, weixinService);
         }
         return new TextBuilder().build(defaultRegistrationCodeMessage, wxMessage, weixinService);//否则传默认的值过去
